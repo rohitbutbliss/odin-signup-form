@@ -1,0 +1,194 @@
+@font-face {
+  font-family: norse-bold;
+  src: url("./fonts/Norse-Bold.otf");
+}
+
+@font-face {
+  font-family: al-bayan;
+  src: url("./fonts/al-bayan-regular.ttf");
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+main {
+  font-family: al-bayan, sans-serif;
+  margin: 0 auto;
+  background-image: linear-gradient(#08303b, #124247, #08303b);
+  display: flex;
+  color: white;
+  justify-content: space-between;
+  width: 100%;
+}
+
+body {
+  width: 100vw;
+}
+
+body > * {
+  max-width: 1500px;
+  height: 100vh;
+}
+
+.hero-image {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.hero-image-background {
+  height: 100%;
+  width: 100%;
+}
+
+.hero-image-background > img {
+  height: 100%;
+}
+
+.hero-image-text {
+  background-color: rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 70px;
+  color: white;
+  font-family: norse-bold, sans-serif;
+  position: absolute;
+  width: 100%;
+  top: 50%;
+  transform: translate(0, -50%);
+}
+
+.hero-image-text > img {
+  width: 25%;
+  max-width: 75px;
+}
+
+.hero-image-text > span {
+  height: 55px;
+}
+
+.content {
+  height: 100%;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-text {
+  background-color: #08303b;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  font-size: 40px;
+}
+
+.main-text > p {
+  line-height: 40px;
+}
+
+.main-text > p:nth-child(3) {
+  margin-top: 20px;
+}
+
+.form-section {
+  background-color: #124247;
+  padding: 20px;
+  width: 100%;
+}
+
+.end-section {
+  flex: 1;
+  background-color: #08303b;
+  padding: 20px;
+  font-size: 25px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+label {
+  font-size: 30px;
+}
+
+input {
+  border: none;
+  width: 100%;
+  font-size: 25px;
+}
+
+input:focus {
+  outline: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+input[type="number"] {
+  -moz-appearance: textfield;
+  appearance: textfield;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+li {
+  width: calc(50% - 50px);
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+}
+
+li > * {
+  flex-shrink: 0;
+}
+
+.input-section {
+  display: flex;
+  padding: 5px 10px;
+  height: 35px;
+}
+
+.form-section label ~ * {
+  background-color: white;
+}
+
+[name^="eye"] {
+  font-size: 25px;
+  color: black;
+}
+
+.input-section.error {
+  box-shadow: 0 0 5px 5px red;
+}
+
+button {
+  width: fit-content;
+  border: none;
+  background-color: #358f80;
+  padding: 10px 20px 5px;
+  font-size: 30px;
+  font-family: inherit;
+  color: inherit;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
